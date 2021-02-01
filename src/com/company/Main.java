@@ -9,17 +9,15 @@ public class Main {
         // Assigment1
 
 
-            short x = 22;
-            short y = 109;
 
-            Scanner inputx = new Scanner(System.in);
+            Scanner input = new Scanner(System.in);
             System.out.println("Write x:");
-            x = inputx.nextShort();
+           short x = input.nextShort();
             System.out.println("X:" + x);
 
-            Scanner inputy = new Scanner(System.in);
+
             System.out.println("Write y:");
-            y = inputy.nextShort();
+           short y = input.nextShort();
             System.out.println("Y:" + y);
 
             System.out.println("Max value:" + Math.max(x, y));
@@ -63,10 +61,10 @@ public class Main {
         //Assigment2
 
 
-            int time = 2;
+
             Scanner inputtime = new Scanner(System.in);
             System.out.println("Write time hour");
-            time = inputtime.nextInt();
+           int time = inputtime.nextInt();
 
             if ((time <= 12) && (time > 0)) {
                 System.out.println("Good Morning Sunshine!");
@@ -84,46 +82,45 @@ public class Main {
         //Assigment3
 
 
-            int day = 23;
-            int month = 10;
-            int year = 2021;
-            if ((month >= 1) && (month <= 12) && (day >= 1) && (day <= 31)) {
-                System.out.println(year + "/" + month + "/" + day);
-            } else {
-                System.out.println("Please check data");
-            }
 
-            Scanner input = new Scanner(System.in);
+
+            Scanner input1 = new Scanner(System.in);
             System.out.println("Please write the day:");
-            day = input.nextInt();
+            int day = input1.nextInt();
 
             System.out.println("Day: " + (day < 10 ? ("0" + day) : day));
 
-            Scanner input1 = new Scanner(System.in);
+
             System.out.println("Please write the month:");
-            month = input1.nextInt();
+            int month = input1.nextInt();
             System.out.println("Month: " + (month < 10 ? String.format("%02d", month) : month));
 
-            Scanner input2 = new Scanner(System.in);
+
             System.out.println("Please write the year:");
-            year = input2.nextInt();
+            int year = input1.nextInt();
             System.out.println("Year: " + year);
 
-            Scanner input3 = new Scanner(System.in);
+        if ((month >= 1) && (month < 13) && (day >0) && (day <= 31)) {
+            System.out.println(year + "/" + month + "/" + day);
+        } else {
+            System.out.println("Please check data");
+        }
+
+
+
             System.out.println("Please select the date formatting. 1 - YYYY/MM/DD, 2- YYYY.MM.DD:");
-            int date = input3.nextInt();
+            int date = input1.nextInt();
             System.out.println("Your date is: " + (date == 1 ? (year + "/" + (month < 10 ? ("0" + month) : month) + "/" + (day < 10 ? ("0" + day) : day)) : (year + "." + (month < 10 ? ("0" + month) : month) + "." + (day < 10 ? ("0" + day) : day))));
 
         // Assigment4
 
             // Task 4.2
 
-            int year4 = 2021;
-            int month4 = 5;
+
             Scanner sc = new Scanner(System.in);
             System.out.println("Please enter month and year");
-            month4 = sc.nextInt();
-            year4 = sc.nextInt();
+            int month4 = sc.nextInt();
+            int year4 = sc.nextInt();
 
             if ((month4 == 1) || (month4 == 3) || (month4 == 5) || (month4 == 7) || (month4 == 8) || (month4 == 10) || (month4 == 12)) {
                 System.out.println("Number of days is 31");
@@ -136,10 +133,10 @@ public class Main {
             }
 
             //task 4.1
-            int day4 = 4;
+
             Scanner sc2 = new Scanner(System.in);
             System.out.println("Please enter day number from 1 to 365");
-            day4 = sc2.nextInt();
+            int day4 = sc2.nextInt();
 
             if ((day4 >= 1) && (day4 <= 31)) {
                 System.out.println("January");
@@ -173,10 +170,10 @@ public class Main {
 
 
 
-            int workingHoursInDay = 8;
+
             Scanner workh = new Scanner(System.in);
             System.out.println("Please enter working hours in day:");
-            workingHoursInDay = workh.nextInt();
+            int workingHoursInDay = workh.nextInt();
             if (workingHoursInDay < 0) {
                 System.out.println("Please check data");
             } else if (workingHoursInDay <= 8) {
